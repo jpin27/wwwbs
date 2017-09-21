@@ -1,0 +1,320 @@
+/*----------- SLIDER PANELS (BASED ON FLEXSLIDER PLUGIN) -------------*/
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+.flexslider .slides {
+    margin: 0;
+    padding: 0;
+}
+.flexslider .slides li {
+    margin: 0;
+    padding: 0;
+    background: none;
+    list-style: none;
+    display: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides li:first-child {
+    display: block;
+}
+.flexslider li:before { display: none; }
+.flexslider .slides img {
+}
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .slides {
+    display: block;
+}
+* html .slides {
+    height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+    display: block;
+}
+.flexslider {
+   
+}
+.slides .more {
+    text-align: center;
+    font-size: 0.8em;
+}
+.slides .more .icon {
+    display: block;
+    margin: 0 auto;
+font-size: 1.6em;
+}
+.slides .more a {
+    margin-top: 1.5em;
+}
+.slides .more .ui-btn-inner { padding-bottom: 0.1em; }
+
+.flex-control-nav {
+    line-height: 0;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 15px 0 ;
+
+
+}
+.flex-control-nav li, .flex-direction-nav li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.flex-control-nav a {
+    text-indent: -10000px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    overflow: hidden;
+    background: #bdd74e;
+    margin: 0 2px;
+    -moz-box-shadow: inset rgba(0,0,0,.1) 0 1px 2px;
+    -webkit-box-shadow: inset rgba(0,0,0,.1) 0 1px 2px;
+    box-shadow: inset rgba(0,0,0,.1) 0 0 2px;
+}
+.flex-control-nav a.active {
+    background: #ecf0b8;
+}
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+}
+.flex-direction-nav a {
+    position: relative;
+    float: left;
+    margin: -38px 0 0;
+    display: block;
+    height: 38px;
+    width: 50px;
+    text-indent: -10000px;
+    background-repeat: no-repeat;
+    background-position: -130px 50%;
+    opacity: .3;
+}
+.flex-direction-nav a.next {
+    float: right;
+    background-position: -90px 50%;
+}
+.flex-direction-nav a:active {
+    opacity: .6;
+}
+.features-slider { position: relative;  }
+.features-slider .feature-item a {
+    display: block;
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.features-slider.no-captions .feature-item a {
+    height: 108px;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+.features-slider .feature-title {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.1em 2.5% 1em;
+    overflow: hidden;
+    width: 95%;
+    background: rgba(154,202,60,.85);
+    text-align: center;
+    color: #fff !important;
+    text-shadow: rgba(0,0,0,.2) 1px 1px 0;
+    font-size: 0.9em;
+ white-space: nowrap;
+text-overflow: ellipsis;
+    font-weight: bold;
+}
+.features-slider .feature-title:empty, .image-gallery figcaption:empty { display: none; }
+
+.features-slider .flex-control-nav {
+    border: none;
+    margin: 0;
+padding: 0 0 0.5em 0;
+position: absolute;
+bottom: 0;
+left: -1%;
+width: 102%;
+background: none;
+    overflow: visible;
+z-index: 2;
+-moz-box-shadow: inset rgba(0,0,0,.05) 0 -2px 2px;
+-webkit-box-shadow: inset rgba(0,0,0,.05) 0 -2px 2px;
+box-shadow: inset rgba(0,0,0,.05) 0 -2px 2px;
+}
+
+.features-slider .flex-control-nav a {
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px;
+    -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px;
+    box-shadow: rgba(0,0,0,.2) 0 1px 1px;
+opacity: .8;
+}
+.features-slider .flex-direction-nav {
+    display: none;
+}
+
+.features-slider .loading-msg {
+    height: 120px;
+}
+
+@media screen and (min-width: 400px) {
+.features-slider .feature-item a {
+    height: 170px;
+}
+.features-slider.no-captions .feature-item a {
+    height: 130px;
+}
+}
+@media screen and (min-width: 480px) {
+.features-slider .feature-item a {
+    height: 190px;
+}
+.features-slider.no-captions .feature-item a {
+    height: 160px;
+}
+}
+@media screen and (min-width: 520px) {
+.features-slider .feature-item a {
+    height: 220px;
+}
+.features-slider.no-captions .feature-item a {
+    height: 180px;
+}
+}
+@media screen and (min-width: 640px) {
+.features-slider .feature-item a {
+    height: 240px;
+}
+.features-slider.no-captions .feature-item a {
+    height: 220px;
+}
+}
+@media screen and (min-width: 750px) {
+.features-slider .feature-item a {
+    height: 300px;
+}
+.features-slider.no-captions .feature-item a {
+    height: 280px;
+}
+}
+
+.news-slider, .events-slider {
+    margin: 0;
+  background: #fafafa;
+  text-shadow: #fff 0 1px 0;
+  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+}
+.news-slider .flex-direction-nav, .events-slider .flex-direction-nav {
+  display: none;
+} 
+
+.events-slider h2, .news-slider h2 {
+
+    position: relative;
+    padding: 1em 15px 0;
+    
+  font-size: 1.0em;
+  text-align: center; 
+
+    margin: 0;
+   color: #777;
+    
+  font-weight: normal;
+
+}
+.content-primary .events-slider h2, .content-primary .news-slider h2 {
+    margin: 0 -15px;
+    font-size: 1.5em;
+}
+.news-slider h2 a, .events-slider h2 a {
+    color: inherit !important;
+font-weight: normal !important;
+}
+.news-slider h2 .icon, .events-slider h2 .icon {
+    margin-top: -0.25em;
+}
+.news-slider .news-summary {
+    display: none;
+}
+.news-slider .news-item {
+    border: none;
+  background: none;
+}
+.news-slider .news-item a, .events-slider .event-item a {
+    padding: 10px;
+  margin: 15px 15px 5px;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+}
+.events-slider .event-item {
+    border: none;
+}
+.events-slider .event-item a {
+    
+}
+
+
+.image-gallery { position: fixed; top: 0; margin: 0 !important; height: 100%; left: 0; z-index: 50; background: rgba(0,0,0,.9); }
+.image-gallery figure { position: relative; text-align: center; }
+.image-gallery figcaption { padding: 1em; display: block; font-size: 0.85em; font-weight: bold; color: #fff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.image-gallery img { width: 100%; vertical-align: bottom; }
+.image-gallery .ui-btn { background: #333; border: none; float: right; width: 2em; height: 2em; margin: 0.5em; opacity: .7; }
+.image-gallery .ui-btn:active { opacity: 1; }
+.image-gallery .ui-btn .ui-icon { margin: 0.25em; opacity: 1; }
+.image-gallery .slides { clear: both; }
+.image-gallery .flex-control-nav { position: fixed; bottom: 1em; width: 100%; background: none; border: none; }
+.image-gallery .flex-direction-nav { position: fixed; bottom: 0.5em; width: 100%; }
+.image-gallery .flex-direction-nav a { opacity: .7; background-color: #333; height: 3em; border-radius: 3px; margin: 0 0.5em; background-image:url('http://www.usask.ca/_usask/includes/mobile/css/themes/images/icons-36-white.png'); }
+.image-gallery .flex-direction-nav a:active { opacity: 1; }
+
+.image-gallery-thumbs { margin: 0 -1% 1em; overflow: hidden; }
+.image-gallery-thumbs li:before { display: none; }
+.image-gallery-thumbs li { padding: 0 !important; background: #f3f3f3; line-height: 0; margin: 1% !important; float: left; height: 6em; overflow: hidden; width: 31.33333%; text-align: center; }
+.image-gallery-thumbs li img:active { opacity: .8; }
+.image-gallery-thumbs li img {  max-width: none; height: 100%;  }
+
+@media screen and (min-width: 480px) {
+.image-gallery-thumbs li { width: 23%; }
+}
+@media screen and (min-width: 620px) {
+.image-gallery-thumbs li { width: 18%; }
+}
+
+
+
+
+
+
