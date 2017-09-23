@@ -1,12 +1,12 @@
 <html>
  <head>
   <title>Wacky Waving Wellness Booking System</title>
-  <link rel="stylesheet.css" type="text/css" href="styles/styles.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
  </head>
  <body>
      <div id="container">
      <div id="header">
-         <hi>Wacky Waving Wellness Booking System</hi>
+         <h1>Wacky Waving Wellness Booking System</h1>
      </div>
  <?php echo '<p>Boop</p>'; ?> 
      </div>
