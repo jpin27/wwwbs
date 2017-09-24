@@ -1,16 +1,23 @@
 #header {
-    background-color: lightgreen;
-    color: grey;
+    background-color: lightgray;
+  	color: #66cc00;
     text-align: center;
+    height: 80px;
+    text-height: auto;
+    padding: 20px;
+    
 }
 #container{
  
 }
 #content{
 
+    text-align: center;
+	padding: 20px 0px ;
 }
-#nav{
 
+#nav{
+	
 }
 #main{
 
