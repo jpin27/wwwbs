@@ -2,22 +2,106 @@
     background-color: lightgray;
   	color: #66cc00;
     text-align: center;
-    height: 80px;
+    height: 50px;
     text-height: auto;
-    padding: 20px;
+    padding: 25px;
+    width: auto;
     
 }
 #container{
- 
+ width: 100%;
+ overflow-x: hidden;
 }
 #content{
 
     text-align: center;
 	padding: 20px 0px ;
+	
 }
 
-#nav{
+#listHolder{
+	width: 1392px;
+	height: 400px;
 	
+}
+nav ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	
+}
+
+nav ul li{
+  list-style-type: none;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+    background-color: #33ff33;
+  	    background-image: url("images/drop.png");
+  	
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    height: 50px;
+       
+}
+nav ul li:Hover{
+    background-color: #66ff33;
+}
+nav a{
+    display: block;
+}
+nav ul ul{
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+    background-color: #66ff33;
+    
+}
+select{
+	text-align-last: center;
+	border: 1px solid #777;
+	cursor: pointer;
+	font-size: 15px;
+	border-radius: 3px;
+	color: #565656;
+	-moz-appearance: none;
+	-webkit-appearance: button;
+	appearance: none;
+	width: 100%;
+	min-width: 100%;
+}
+
+.docSelector{
+	
+	margin: 20px 0px 0px 0px;	
+	position: relative;
+	display: inline-block;
+	width:100%;
+	
+}
+.docSelector select{
+	position: relative;
+	padding: 10px 0px;
+
+	
+}	
+.dateSelector{
+	background: #cccccc;
+	margin: .5rem 0rem;
+	position: relative;
+	display: inline-block;
+	width:100%; 
+	padding: 0;
+}
+.dateSelector select{
+	position: relative;
+	padding: 10px 0px;
+	
+}
 }
 #main{
 
@@ -25,3 +109,4 @@
 #footer{
 
 }
+
