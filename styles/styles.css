@@ -1,12 +1,17 @@
 #header {
     background-color: lightgray;
-  	color: #66cc00;
+  	color: #abc123;
     text-align: center;
-    height: 50px;
-    text-height: auto;
-    padding: 25px;
-    width: auto;
+	height: auto;
+	padding: 10px;
+    width: 100%;
     
+}
+
+
+h1{
+	text-align: center;
+	vertical-align: middle;
 }
 #container{
  width: 100%;
@@ -69,7 +74,7 @@ select{
 	border-radius: 3px;
 	color: #565656;
 	-moz-appearance: none;
-	-webkit-appearance: button;
+	-webkit-appearance: none;
 	appearance: none;
 	width: 100%;
 	min-width: 100%;
@@ -81,27 +86,29 @@ select{
 	position: relative;
 	display: inline-block;
 	width:100%;
+	background: #F1EDED;
 	
 }
-.docSelector select{
+.docSelector:hover{
+	background: #abc123;
+}
+.docSelector select, .dateSelector select{
 	position: relative;
 	padding: 10px 0px;
-
+	background: url("../images/dropdown.png") no-repeat 98%;
 	
 }	
 .dateSelector{
-	background: #cccccc;
+	
 	margin: .5rem 0rem;
 	position: relative;
 	display: inline-block;
 	width:100%; 
 	padding: 0;
+	background: #F1EDED;
 }
-.dateSelector select{
-	position: relative;
-	padding: 10px 0px;
-	
-}
+.dateSelector:hover{
+	background: #abc123;
 }
 #main{
 
