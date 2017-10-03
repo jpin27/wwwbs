@@ -7,8 +7,6 @@
     width: 100%;
     
 }
-
-
 h1{
 	text-align: center;
 	vertical-align: middle;
@@ -18,42 +16,36 @@ h1{
  overflow-x: hidden;
 }
 #content{
-
     text-align: center;
 	padding: 20px 0px ;
 	
 }
 
-#listHolder{
-	width: 1392px;
-	height: 400px;
-	
-}
 nav ul{
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
 	
+	padding: 0px;
+	margin: 1.5em 0;	
 }
 
 nav ul li{
-  list-style-type: none;
+  	list-style-type: none;
     display: block;
-    text-align: center;
+    text-align: justify;
     font-size: 25px;
-    height: 50px;
-    background-color: #33ff33;
-  	    background-image: url("images/drop.png");
+   	height: 50px;
+  	background: url("../images/sortRight.png") no-repeat 98% #F1EDED;
+	border-bottom: 1px solid #eee;
   	
 }
 nav ul li a{
     text-decoration: none;
     color: #333;
     height: 50px;
+	
        
 }
 nav ul li:Hover{
-    background-color: #66ff33;
+    background-color: #abc123;
 }
 nav a{
     display: block;
@@ -63,7 +55,7 @@ nav ul ul{
 }
 nav ul li:hover > ul{
     display: block;
-    background-color: #66ff33;
+    background-color: #abc123;
     
 }
 select{
@@ -95,7 +87,7 @@ select{
 .docSelector select, .dateSelector select{
 	position: relative;
 	padding: 10px 0px;
-	background: url("../images/dropdown.png") no-repeat 98%;
+	background: url("../images/sortDown.png") no-repeat 98%;
 	
 }	
 .dateSelector{
@@ -110,10 +102,45 @@ select{
 .dateSelector:hover{
 	background: #abc123;
 }
+table{
+    margin: 1.5em 0;
+    width: 100% !important;
+    height: auto !important;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-collapse: collapse;
+    font-size: 0.85em;
+    line-height: 1.3em;
+}
+th{
+	height: 50px;
+	background-color: #F1EDED;
+	margin: 0 1.5em;
+}
+tr{
+	text-align: inherit;
+	height: 50px;
+    border-bottom: 1px solid #eee;
+}
+
 #main{
 
 }
 #footer{
+	height:auto;
+	
+}
+#footer ul{
+	text-align: center;
+	margin: 30px 0px 60px 0px
+}
+#footer ul a{
+	text-decoration: none;
+    color: #333;
+	margin: 10px;
 
+}
+#footer ul a:hover{
+	color: #ABC123;
 }
 
