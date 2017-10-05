@@ -120,7 +120,7 @@
             <nav>
             <ul>
            <li> <a href="#">Log In</a></li>
-           <li><a href="#">Search Practitioners</a></li>
+           <li><a href="index.php">Search Practitioners</a></li>
            <li> <a href="#">My Bookings</a></li>
             </ul>
             </nav>

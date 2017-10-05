@@ -11,6 +11,7 @@ h1{
 	text-align: center;
 	vertical-align: middle;
 }
+
 #container{
  width: 100%;
  overflow-x: hidden;
@@ -21,10 +22,14 @@ h1{
 	
 }
 
+nav {
+	border-bottom: 1px solid #eee;
+}
 nav ul{
 	
 	padding: 0px;
 	margin: 1.5em 0;	
+
 }
 
 nav ul li{
@@ -34,14 +39,13 @@ nav ul li{
     font-size: 25px;
    	height: 50px;
   	background: url("../images/sortRight.png") no-repeat 98% #F1EDED;
-	border-bottom: 1px solid #eee;
+	
   	
 }
 nav ul li a{
     text-decoration: none;
     color: #333;
     height: 50px;
-	
        
 }
 nav ul li:Hover{
@@ -56,7 +60,6 @@ nav ul ul{
 nav ul li:hover > ul{
     display: block;
     background-color: #abc123;
-    
 }
 select{
 	text-align-last: center;
@@ -73,7 +76,6 @@ select{
 }
 
 .docSelector{
-	
 	margin: 20px 0px 0px 0px;	
 	position: relative;
 	display: inline-block;
@@ -123,6 +125,22 @@ tr{
     border-bottom: 1px solid #eee;
 }
 
+.briefDesc input{
+	width: 100%;
+	height: 20%;
+	font-size: 20px;
+	padding: .4em;
+	line-height: 1.4em;
+}
+.button{
+	background: #abc123;
+	margin: 20px 0px;
+	padding: 20px 0px;
+	font-size: 20px;
+}
+.button:hover{
+	background: #777;
+}
 #main{
 
 }
@@ -132,12 +150,14 @@ tr{
 }
 #footer ul{
 	text-align: center;
-	margin: 30px 0px 60px 0px
+	margin: 30px 0px 60px 0px;
+	
 }
 #footer ul a{
 	text-decoration: none;
     color: #333;
 	margin: 10px;
+	
 
 }
 #footer ul a:hover{
