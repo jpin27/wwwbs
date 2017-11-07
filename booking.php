@@ -5,7 +5,7 @@
 <html>
  <head>
   <title>Wacky Waving Wellness Booking System</title>
-  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css" />
  </head>
  <body>
   <div id="container">
