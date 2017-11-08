@@ -17,24 +17,60 @@ Wacky Waving Wellness Booking System (WWWBS) is Saskatchewan's first online book
 
 WWWBS uses the following technologies and open source projects to work properly:
 
-* [AngularJS] - HTML enhanced for web apps!
+* [Vue.js] - HTML enhanced for web apps!
 * [Bootstrap] - great UI boilerplate for modern web apps
-* [Breakdance](http://breakdance.io) - HTML to Markdown converter
+* [Laravel] - the coolest PHP framework ever
+* [Composer] - dependency manager for Laravel
+* [Gulp] - the streaming build system
+* [Sass] - a stable professional-grade CSS extension language
 * [MySQL] - for database access
 * [PHP] - duh
 
-### Installation (hi CMPT370 TAs!)
+# Installation
 
-WWWBS requires [PHP] to run.
+### Development environment 
+WWWBS requires Laravel, Composer, and [npm] to run, as well as an AMP server: [Apache], MySQL, and PHP.
 
-Installation is easy. Just copy the "Wacky Waving Wellness Booking System" folder in your htdocs file. Boom. Wacky.
+Install [Composer](https://getcomposer.org/download/) (There's a Windows installer to make your life easier). `cd` into the directory where you `git clone`d the WWWBS repo, then go to the `frameworkplayground` branch (someday we'll merge this to the master branch once we know what we're doing):
+```bash
+$ git checkout frameworkplayground
+```
+Then install Laravel (we're making a global install just so it's more awesome):
+```bash
+$ composer global require "laravel/installer"
+```
+Verify that you have everything installed:
+```bash
+$ php -V
+$ composer --version
+$ laravel --version
+```
+Compile the Vue.js and Laravel and dependencies...
+```bash
+$ cd wwwbs
+$ npm install
+$ composer install
+```
+Authenticate your session, then start the development server!
+```bash
+$ php artisan key:generate
+$ php artisan serve
+```
 
+Keep the `php artisan serve` window open, and type http://127.0.0.1:8000 on your favourite browser (which is Chrome). Boom. Wacky.
+
+### Testing environment
+
+Our project is run by TDD. Lots of it. Our code for testing is still under development, but our testing environment with PHPUnit, so go ahead and do that:
+
+```bash
+$ phpunit
+```
 
 ### Todos
 
  - Write MORE Tests
- - Get the database running
- - Edit Installation guide
+ - Get Milestone 5 done
 
 ### The Dev Team
 
@@ -54,11 +90,15 @@ MIT
 
 
    [MySQL]: <https://www.mysql.com/>
-   [node.js]: <http://nodejs.org>
+   [Vue.js]: <https://vuejs.org/>
    [Bootstrap]: <http://getbootstrap.com/>
-   [jQuery]: <http://jquery.com>
-   [AngularJS]: <http://angularjs.org>
+   [Laravel]: <https://laravel.com/>
+   [Composer]: <https://getcomposer.org/download/>
    [PHP]: <http://www.php.net/>
+   [Gulp]: <https://gulpjs.com/>
+   [Sass]: <http://sass-lang.com/>
+   [npm]: <https://www.npmjs.com/get-npm>
+   [Apache]: <https://httpd.apache.org/download.cgi>
 
    [Abeghe]: <mailto:cta072@mail.usask.ca>
    [Ahmed]: <mailto:taa632@mail.usask.ca>
