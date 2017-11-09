@@ -13,13 +13,15 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
-    static $password;
+$factory->define(App\Appointment::class, function (Faker $faker) {
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'date' => $faker->date,
+        'time' => $faker->time,
+        'brief-desc' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'full-desc' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
+        'completed' => $faker->boolean,
+        'canceled' => $faker->boolean
+
     ];
 });
