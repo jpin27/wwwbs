@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('getstarted', function () {
+    return view('index');
+});
+
+Route::get('bookappt', function () {
+    return view('booking');
+});
+
 // boop

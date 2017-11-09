@@ -1,10 +1,13 @@
-<?php
+<?php ?>
 
-?>
+
 <html>
  <head>
   <title>Wacky Waving Wellness Booking System</title>
-  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+  <!-- Use Blade to grab the CSS file. It's stored in /public/css/ -->
+  <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
+
  </head>
  <body>
     <div id="container">
@@ -51,7 +54,7 @@
             			</tr>
             			<tr>
             				<td>09:30AM</td>
-            				<td><a href="booking.php">Available</a></td>
+            				<td><a href="{{ url('/bookappt') }}">Available</a></td>
             			</tr>
             			<tr>
             				<td>10:00AM</td>

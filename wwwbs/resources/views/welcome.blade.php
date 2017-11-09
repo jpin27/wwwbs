@@ -83,7 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Patient Login</a>
+                    <a href="{{ url('/getstarted') }}">Get Started</a>
+                    <a href="https://laracasts.com">Admin Login</a>
                     <a href="https://laracasts.com">Admin Login</a>
                 </div>
             </div>
