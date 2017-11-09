@@ -22,7 +22,7 @@ WWWBS uses the following technologies and open source projects to work properly:
 * [Laravel] - the coolest PHP framework ever
 * [Composer] - dependency manager for Laravel
 * [Gulp] - the streaming build system
-* [Sass] - a stable professional-grade CSS extension language
+* [Sass] - basically, CSS with superpowers. a stable professional-grade CSS extension language
 * [MySQL] - for database access
 * [PHP] - duh
 
@@ -31,11 +31,7 @@ WWWBS uses the following technologies and open source projects to work properly:
 ### Development environment 
 WWWBS requires Laravel, Composer, and [npm] to run, as well as an AMP server: [Apache], MySQL, and PHP.
 
-Install [Composer](https://getcomposer.org/download/) (There's a Windows installer to make your life easier). `cd` into the directory where you `git clone`d the WWWBS repo, then go to the `frameworkplayground` branch (someday we'll merge this to the master branch once we know what we're doing):
-```bash
-$ git checkout frameworkplayground
-```
-Then install Laravel (we're making a global install just so it's more awesome):
+Install [Composer](https://getcomposer.org/download/) (There's a Windows installer to make your life easier). `cd` into the directory where you `git clone`d the WWWBS repo, then install Laravel (we're making a global install just so it's more awesome):
 ```bash
 $ composer global require "laravel/installer"
 ```
@@ -45,13 +41,21 @@ $ php -V
 $ composer --version
 $ laravel --version
 ```
-Compile the Vue.js and Laravel and dependencies...
+
+You only have to do the steps above once, and you're all set to code!
+
+### During development 
+To get the latest development code, checkout the `develop` branch:
+```bash
+$ git checkout develop
+``` 
+Compile the Vue.js and Laravel dependencies...
 ```bash
 $ cd wwwbs
 $ npm install
 $ composer install
 ```
-Authenticate your session, then start the development server!
+Authenticate your session, then start the development server! Make sure you have the .env file in the `wwwbs` folder (for security, our .env file is not tracked by version control)
 ```bash
 $ php artisan key:generate
 $ php artisan serve
@@ -61,16 +65,13 @@ Keep the `php artisan serve` window open, and type http://127.0.0.1:8000 on your
 
 ### Testing environment
 
-Our project is run by TDD. Lots of it. Our code for testing is still under development, but our testing environment with PHPUnit, so go ahead and do that:
-
-```bash
-$ phpunit
-```
+Our project is run by TDD. Lots of it. Our code for testing is still under development, but we'll update this space with instructions on how to do testing when we're done.
 
 ### Todos
 
  - Write MORE Tests
  - Get Milestone 5 done
+ - Integrate Gulp to automate PHPUnit testing and Sass stylesheet compilation
 
 ### The Dev Team
 
