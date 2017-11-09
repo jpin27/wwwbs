@@ -1,21 +1,23 @@
 {{-- 
     Powerful Blade layouting in action. Instead of typing the repetitive <html> blah blah,
-    we just extend whatever's in the layout file at /resources/views/layout.blade.php.
-    No more repetitive html styling. Cool, eh?
- --}}
+    we just extend whatever's in the layout file at /resources/views/layouts/master.blade.php.
+    No more repetitive html styling. Cool, eh? 
+--}}
 @extends ('layouts.master')
 
 {{-- 
-    Remember the @yield('content') in layout.blade.php? Well, this is the section that replaces it. Here we put the actual body of our welcome page.
+    Remember the @yield('content') in layouts/master.blade.php? Well, this is the section that replaces it. Here we put the actual body of our welcome page.
  --}}
 @section ('content')
 
+    {{-- I don't know what this shit is for. Got it from Bootstrap. --}}
     <main role="main">
 
         <!-- Jumbotron -->
         <div class="jumbotron">
           <h1>Fuck!</h1>
           <p class="lead">This fucking webpage took 4 hours to make. Shit! Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+          {{-- TODO: Read on Bootstrap components and use them --}}
           <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
         </div>
 
@@ -156,6 +158,5 @@
 
 @endsection
 
-
 {{-- We don't need to define a footer here because it's already in the master layout. 
-    If we wanted a special footer, we could create a @section('footer') here --}}
+    If we wanted a special footer, we could create a @section('footer') here
