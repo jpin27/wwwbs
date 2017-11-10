@@ -22,7 +22,7 @@
         </div>
 
         <div class="docSelector">
-            <select>
+            <select style = "width: 100%">
                 <option> Choose Doctor </option>
                 <option>Dr. Tayyab</option>
                 <option>Dr. Jay</option>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="dateSelector">
-            <select>
+            <select style = "width: 100%; margin-top: 10px">
                 <option> Date </option>
                 <option>October 13, 2017</option>
                 <option>October 14, 2017</option>
@@ -67,11 +67,11 @@
                 </tr>
                 <tr>
                     <td>10:00AM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>10:30AM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>11:00AM</td>
@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <td>11:30AM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>12:00PM</td>
@@ -90,43 +90,43 @@
                 </tr>
                 <tr>
                     <td>1:00PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>1:30PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>2:00PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>2:30PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>3:00PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>3:30PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>4:00PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>4:30PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>5:00PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>5:30PM</td>
-                    <td><a href="booking.php">Available</a></td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
                 </tr>
                 <tr>
                     <td>6:00PM</td>
@@ -159,4 +159,4 @@
 @endsection
 
 {{-- We don't need to define a footer here because it's already in the master layout. 
-    If we wanted a special footer, we could create a @section('footer') here
+    If we wanted a special footer, we could create a @section('footer') here --}}
