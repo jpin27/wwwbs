@@ -49,95 +49,92 @@
           </p>
         </div>
 
-
-        <div class="row">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th style="width: 95%; text-align: left">Dr. Tayyab
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>09:00AM</td>
-                        <td>Closed</td>
-                    </tr>
-                    <tr>
-                        <td>09:30AM</td>
-                        <td><a href="{{ url('/bookappt') }}">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>10:00AM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>10:30AM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>11:00AM</td>
-                        <td>Booked</td>
-                    </tr>
-                    <tr>
-                        <td>11:30AM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>12:00PM</td>
-                        <td rowspan="2" style="vertical-align: baseline">Lunch Hour</td>
-                    </tr>
-                    <tr>
-                        <td>12:30PM</td>
-                    </tr>
-                    <tr>
-                        <td>1:00PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>1:30PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>2:00PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>2:30PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>3:00PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>3:30PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>4:00PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>4:30PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>5:00PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>5:30PM</td>
-                        <td><a href="booking.php">Available</a></td>
-                    </tr>
-                    <tr>
-                        <td>6:00PM</td>
-                        <td>Closed</td>
-                    </tr>      
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th style="width: 95%; text-align: left">Dr. Tayyab
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00AM</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>09:30AM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>10:00AM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>10:30AM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>11:00AM</td>
+                    <td>Booked</td>
+                </tr>
+                <tr>
+                    <td>11:30AM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>12:00PM</td>
+                    <td rowspan="2" style="vertical-align: baseline">Lunch Hour</td>
+                </tr>
+                <tr>
+                    <td>12:30PM</td>
+                </tr>
+                <tr>
+                    <td>1:00PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>1:30PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>2:00PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>2:30PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>3:00PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>3:30PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>4:00PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>4:30PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>5:00PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>5:30PM</td>
+                    <td><a href="{{ url('/bookappt') }}">Available</a></td>
+                </tr>
+                <tr>
+                    <td>6:00PM</td>
+                    <td>Closed</td>
+                </tr>      
+            </tbody>
+        </table>
 
         <!-- Example row of columns -->
         {{-- <div class="row">

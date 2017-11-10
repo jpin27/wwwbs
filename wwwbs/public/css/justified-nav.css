@@ -9,12 +9,25 @@ body {
   padding-bottom: 40px;
   margin-top: 40px;
   border-top: 1px solid #eee;
+	background: #f2f2f2;
+	text-align: center;
+	
 }
 
+<<<<<<< HEAD
 a.footer{
   color: red;
 }
 
+=======
+.table{
+	text-decoration: none;
+}
+
+a .table{
+	text-decoration: none;
+}
+>>>>>>> origin/develop
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -29,6 +42,8 @@ a.footer{
   background-image: linear-gradient(to bottom, #f7f7f7 0%,#eee 100%);
   border: 1px solid #e5e5e5;
 }
+
+
 
 @media (min-width: 768px) {
   .navbar-nav {
