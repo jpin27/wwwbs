@@ -34,4 +34,7 @@ Route::get('bookappt', function () {
     return view('booking');
 });
 
+Route::get('addStaff', function () {
+    return view('addStaff');
+});
 // boop
