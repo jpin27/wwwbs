@@ -13,10 +13,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">My Bookings</a>
+            <a class="nav-link" href="{{ url('/bookappt') }}">My Bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Practitioners</a>
+            <a class="nav-link" href="/">Practitioners</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">My Profile</a>
