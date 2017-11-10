@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-    	// Call the seeds to seed the database
+    	// SUMMON THE SEEDS
     	$this->call([
         	PatientsTableSeeder::class,
         	DoctorsTableSeeder::class,

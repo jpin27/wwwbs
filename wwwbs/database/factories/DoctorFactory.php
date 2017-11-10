@@ -16,6 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Doctor::class, function (Faker $faker) {
     static $password;
 
+    // TODO: edit the array randomizer to spit out department name instead of indices
     return [
         'firstName' => $faker->firstname($gender = null),
         'lastName' => $faker->lastName,

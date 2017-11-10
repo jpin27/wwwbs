@@ -1,7 +1,7 @@
 {{-- Thanks for the code, Bootstrap! You da best! --}}
 
 <header class="masthead">
-  <h3 class="text-muted">USask Health Centre Banner here LOL</h3>
+  <h3 class="text-muted">University of Saskatchewan Wellness Centre</h3>
 
   <nav class="navbar navbar-expand-md navbar-light bg-light rounded mb-3">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

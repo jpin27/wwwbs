@@ -23,6 +23,6 @@ $factory->define(App\Patient::class, function (Faker $faker) {
         'healthNumber' => $faker->randomNumber($nbDigits = 9, $strict = false),
         'birthDate' => $faker->dateTimeThisCentury($max = 'now', $timezone = date_default_timezone_get()),
         'address' => $faker->address,
-
     ];
+    
 });

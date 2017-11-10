@@ -11,6 +11,10 @@ body {
   border-top: 1px solid #eee;
 }
 
+a.footer{
+  color: red;
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
