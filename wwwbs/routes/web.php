@@ -34,6 +34,10 @@ Route::get('bookappt', function () {
     return view('booking');
 });
 
+Route::get('mastertest', function () {
+    return view('welcometest');
+});
+
 Route::get('addStaff', function () {
     return view('addStaff');
 });
