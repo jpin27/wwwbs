@@ -1,9 +1,9 @@
 {{-- Let's grab the master layout --}}
-@extends ('layouts.master')
+@extends ('layouts.mastertest')
 
 {{-- Here's what the content of booking.blade.php is gonna be --}}
 @section ('content')
-
+	<section class="pt-4" id="services">
 	{{-- Still don't know what this shit is for --}}
     <main role="main">
 
@@ -17,6 +17,11 @@
 		</form>
 
     </main>
+	</section>
+
+	<section class="pt-4" id="practitioners">
+	<section class="pt-4" id="about">
+		<section class="pt-4" id="practitioners">
 
 {{-- Boom. Simple. --}}
 @endsection
