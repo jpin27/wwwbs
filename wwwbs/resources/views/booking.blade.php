@@ -1,5 +1,5 @@
 {{-- Let's grab the master layout --}}
-@extends ('layouts.mastertest')
+@extends ('layouts.master')
 
 {{-- Here's what the content of booking.blade.php is gonna be --}}
 @section ('content')
@@ -19,7 +19,7 @@
     </main>
 	</section>
 
-	
+
 
 {{-- Boom. Simple. --}}
 @endsection
