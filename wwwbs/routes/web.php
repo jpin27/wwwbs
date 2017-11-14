@@ -43,7 +43,7 @@ Route::get('addStaff', function () {
 });
 
 Route::get('log', function () {
-    return view('Login');
+    return view('auth.Custom_Login');
 });
 // boop
 
