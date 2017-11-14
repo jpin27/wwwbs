@@ -19,9 +19,7 @@
     </main>
 	</section>
 
-	<section class="pt-4" id="practitioners">
-	<section class="pt-4" id="about">
-		<section class="pt-4" id="practitioners">
+	
 
 {{-- Boom. Simple. --}}
 @endsection

@@ -19,7 +19,7 @@ class CreateAppointmentsTable extends Migration
         */
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('doctor_id')
+            $table->integer('doctor_id');
 
             // TODO: Find out what the fuck is all that $fillable[] shit is about
 

@@ -12,10 +12,10 @@
 */
 
 /*
- / When the homepage (http://localhost:8000) is called, summon HomeController with the index() method.
- / the file is at /app/Http/Controllers/HomeController.php
+ / When the homepage (http://localhost:8000) is called, summon the main Controller with the index() method.
+ / the file is at /app/Http/Controllers/Controller.php
 */
-Route::get('/', 'HomeController@index');
+Route::get('/', 'Controller@index');
 
 /*
  / Tiny little module to test database connection.
@@ -42,3 +42,7 @@ Route::get('addStaff', function () {
     return view('addStaff');
 });
 // boop
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

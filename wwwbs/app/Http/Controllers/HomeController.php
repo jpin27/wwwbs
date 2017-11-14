@@ -6,7 +6,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Show the application dashboard.
@@ -15,6 +23,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $request->user()->authorizeRoles(['employee', 'manager']);
+
+        return view('home');
     }
+
+    /*
+    public function someAdminStuff()
+    {
+        $request->user()->authorizeRoles('manager');
+        return view('some.view');
+    }
+    */
 }

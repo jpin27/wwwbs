@@ -73,4 +73,11 @@
     }
   });
 
+  $('#datepicker').datepicker();
+$('#datepicker').on('changeDate', function() {
+    $('#my_hidden_input').val(
+        $('#datepicker').datepicker('getFormattedDate')
+    );
+});
+
 })(jQuery); // End of use strict
