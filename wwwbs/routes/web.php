@@ -19,7 +19,7 @@ Route::get('/', 'Controller@index');
 
 /*
  / Tiny little module to test database connection.
- / This is at http://localhost:8080/test. 
+ / This is at http://localhost:8080/test.
  / TODO: Move to PHPUnit testing at some point
  */
 Route::get('test', function() {
@@ -34,8 +34,8 @@ Route::get('bookappt', function () {
     return view('booking');
 });
 
-Route::get('mastertest', function () {
-    return view('welcometest');
+Route::get('master', function () {
+    return view('welcome');
 });
 
 Route::get('addStaff', function () {
