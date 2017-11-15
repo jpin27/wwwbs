@@ -14,19 +14,19 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 
 			<div class="col-lg-10 mx-auto">
 				<h1 class="text-uppercase">
-					<strong>Welcome to the Fucking Student Wellness Centre</strong>
+					<strong>Welcome to the <br> Student Wellness Centre</strong>
 				</h1>
 				<hr>
 			</div>
 
 			<div class="col-lg-8 mx-auto">
-				<p class="text-faded mb-5">I spent 4 hours on this shit. Book an appointment online for your medical wellness... things. Get started today!</p>
+				<p class="text-faded mb-5">Make an appointement at the University of Saskatchewan Student Wellness Center. Get started today!</p>
 
 				{{-- Fucking Form class isn't included in Laravel 5 so I had to install it in the app ugh --}}
-				<div id="datepicker" data-date="12/03/2012"></div>
-				<input type="hidden" id="my_hidden_input">
+<!-- 				<div id="datepicker" data-date="12/03/2012"></div>
+				<input type="hidden" id="my_hidden_input"> -->
 
-				<a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Book by Service</a><strong>  OR  </strong><a class="btn btn-primary btn-xl js-scroll-trigger" href="#practitioners">Book by Practitioner</a>
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Book by Service</a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong><a class="btn btn-primary btn-xl js-scroll-trigger" href="#practitioners">Book by Practitioner</a>
 			</div>
 
 		</div>
@@ -40,7 +40,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 class="section-heading">Our services</h2>
-				<article>Click on a service to book an appointment today.</article>
+				<article>Click on a service to book an appointment today</article>
 				<hr class="my-4">
 			</div>
 		</div>
@@ -56,7 +56,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-stethoscope text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Medical Appointment</h3>
-					<p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+					<p class="text-muted mb-0">Doctor and nurse appointments</p>
 				</div>
 			</div>
 
@@ -66,7 +66,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Mental Health Assessment</h3>
-					<p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+					<p class="text-muted mb-0">Professional assistance with mental health and counselling</p>
 				</div>
 			</div>
 
@@ -77,7 +77,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-cutlery text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Nutritional Counseling</h3>
-					<p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+					<p class="text-muted mb-0">Meet with a dietitian</p>
 				</div>
 			</div>
 
@@ -88,7 +88,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-wheelchair text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Sexual Health Care</h3>
-					<p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+					<p class="text-muted mb-0">Contraception counselling and STI prevention, testing and treatment</p>
 				</div>
 			</div>
 
@@ -102,7 +102,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Physiotherapy</h3>
-					<p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+					<p class="text-muted mb-0">Make an appointment with a physiotherapist</p>
 				</div>
 			</div>
 
@@ -112,7 +112,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Massage Therapy</h3>
-					<p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+					<p class="text-muted mb-0">Make an appointment with a massage therapist</p>
 				</div>
 			</div>
 
@@ -122,7 +122,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Chiropractice</h3>
-					<p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+					<p class="text-muted mb-0">Make an appointment with a chiropractor</p>
 				</div>
 			</div>
 
@@ -132,7 +132,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 						<i class="fa fa-4x fa-plane text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Travel Immunization</h3>
-					<p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+					<p class="text-muted mb-0">Get vaccination for Hepatitis A and/or B before short-term travel</p>
 				</div>
 			</div>
 
