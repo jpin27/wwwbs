@@ -31,7 +31,7 @@ Route::get('test', function() {
 
 
 Route::get('bookappt', function () {
-    return view('booking1');
+    return view('bookings');
 });
 
 Route::get('master', function () {

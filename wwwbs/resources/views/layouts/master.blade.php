@@ -4,6 +4,11 @@
 
   <head>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -32,12 +37,12 @@
     <!-- Custom styles for this template -->
     <link href="css/creative.css" rel="stylesheet">
     <link href="css/bootstrap-datepicker.css" rel="stylesheet">
+    
   </head>
 
   <body id="page-top">
 
-    @include('layouts.navbar')
-
+	@include('layouts.navbar')
     @yield('content')
 
 
@@ -69,7 +74,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.js"></script>
-    <<script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
 
   </body>
 
