@@ -31,7 +31,7 @@ Route::get('test', function() {
 
 
 Route::get('bookappt', function () {
-    return view('booking');
+    return view('bookings');
 });
 
 Route::get('master', function () {
@@ -40,6 +40,10 @@ Route::get('master', function () {
 
 Route::get('addStaff', function () {
     return view('addStaff');
+});
+
+Route::get('log', function () {
+    return view('auth.Custom_Login');
 });
 // boop
 
