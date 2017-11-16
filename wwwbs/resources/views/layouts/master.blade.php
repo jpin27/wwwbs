@@ -27,7 +27,7 @@
 
 
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type='text/css' media="all" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <!-- Custom styles for this template -->
     <link href="css/creative.css" rel="stylesheet">

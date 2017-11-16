@@ -64,4 +64,9 @@ class User extends Authenticatable
     {
       return null !== $this->roles()->where(‘name’, $role)->first();
     }
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }
