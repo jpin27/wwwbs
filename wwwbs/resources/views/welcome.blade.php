@@ -22,10 +22,6 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-8 mx-auto">
 				<p class="text-faded mb-5">Make an appointement at the University of Saskatchewan Student Wellness Center. Get started today!</p>
 
-				{{-- Fucking Form class isn't included in Laravel 5 so I had to install it in the app ugh --}}
-<!-- 				<div id="datepicker" data-date="12/03/2012"></div>
-				<input type="hidden" id="my_hidden_input"> -->
-
 				<a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Book by Service</a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong><a class="btn btn-primary btn-xl js-scroll-trigger" href="#practitioners">Book by Practitioner</a>
 			</div>
 
