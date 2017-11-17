@@ -23,7 +23,7 @@
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#mainNav',
-    offset: 57
+    offset: 120
   });
 
   // Collapse Navbar
@@ -56,6 +56,7 @@
     distance: '0px'
   }, 300);
 
+
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -73,3 +74,15 @@
   });
 
 })(jQuery); // End of use strict
+
+$('#datepicker').datepicker({
+  maxViewMode: 1,
+  orientation: "top auto",
+  daysOfWeekDisabled: "0,6",
+
+});
+$('#datepicker').on('changeDate', function() {
+    $('#my_hidden_input').val(
+        $('#datepicker').datepicker('getFormattedDate')
+    );
+});

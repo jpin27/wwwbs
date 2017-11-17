@@ -20,8 +20,9 @@ $factory->define(App\User::class, function (Faker $faker) {
         // All system users have a first name and last name, and an email.
         'firstName' => $faker->firstname($gender = null),
         'lastName' => $faker->lastName,
-        'email' => $faker->email,
-        'password' => $faker->password,
+        'email' => $faker->unique()->safeEmail,
+        'password' => $password ?: $password = bcrypt('changeme'),
+        'remember_token' => str_random(10),
     ];
 });
 

@@ -20,7 +20,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</div>
 
 			<div class="col-lg-8 mx-auto">
-				<p class="text-faded mb-5">Make an appointement at the University of Saskatchewan Student Wellness Center. Get started today!</p>
+				<p class="text-faded mb-5">Make an appointment at the University of Saskatchewan Student Wellness Center. Get started today!</p>
 
 				<a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Book by Service</a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong><a class="btn btn-primary btn-xl js-scroll-trigger" href="#practitioners">Book by Practitioner</a>
 			</div>
@@ -158,8 +158,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 <div class="container-fluid p-0">
 	<div class="row popup-gallery">
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/1.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/1.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
@@ -173,8 +173,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/2.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/2.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
@@ -188,8 +188,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/3.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/3.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
@@ -203,8 +203,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/4.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/4.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
@@ -218,8 +218,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/5.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/5.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
@@ -233,8 +233,8 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-6">
-			<a class="portfolio-box" href="images/portfolio/fullsize/6.jpg">
-				<img class="img-fluid" src="images/portfolio/thumbnails/6.jpg" alt="">
+			<a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+				<img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
