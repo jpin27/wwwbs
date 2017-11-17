@@ -23,6 +23,7 @@
     
     <div>
         <div class="container">
+         <p class="lead" style="color:#4C934C;">Book an Appointment</p>
             <div class="row">
                    <div class="col-md-1 center-block" id="display">
                 <div id="datepicker" data-date="12/03/2012"></div>
