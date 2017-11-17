@@ -28,9 +28,9 @@ WWWBS uses the following technologies and open source projects to work properly:
 # Installation
 
 ### Development environment 
-WWWBS requires Laravel, Composer, and [npm] to run, as well as an AMP server: [Apache], MySQL, and PHP.
+WWWBS requires Laravel, Composer, and [npm] to run, as well as MySQL and PHP.
 
-Install [Composer](https://getcomposer.org/download/) (There's a Windows installer to make your life easier). `cd` into the directory where you `git clone`d the WWWBS repo, then install Laravel (we're making a global install just so it's more awesome):
+Install [Composer](https://getcomposer.org/download/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/) (There's Windows installers to make your life easier). Reboot your system. `cd` into the directory where you `git clone`d the WWWBS repo, then install Laravel (we're making a global install just so it's more awesome):
 
 ```bash
 $ composer global require "laravel/installer"
@@ -51,22 +51,46 @@ To get the latest development code, checkout the `develop` branch:
 ```bash
 $ git checkout develop
 ```
-Compile the Vue.js and Laravel dependencies...
+Compile the npm (Front-end) and Laravel (Back-end) dependencies...
 
 ```bash
 $ cd wwwbs
 $ npm install
 $ composer install
 ```
-Authenticate your session, then start the development server! Make sure you have the .env file in the `wwwbs` folder (for security, our .env file is not tracked by version control)
+
+Compile the CSS and JavaScript files, authenticate your session, then start the development server! Make sure you have the .env file in the `wwwbs` folder (for security, our .env file is not tracked by version control)
 
 ```bash
+$ npm run dev
 $ php artisan key:generate
 $ php artisan serve
 ```
 
 Keep the `php artisan serve` window open, and type http://127.0.0.1:8000 on your favourite browser (which is Chrome). Boom. Wacky.
 
+### Front-end development
+All CSS, JS, and image files should be placed in the `/resources` folder. The npm scripts will compile the resources and place it in the `/public` directory so **no development code (CSS, JS, img) must be placed in /public.** When making changes to the resource files, run the following command to recompile all assets:
+```bash
+$ npm run dev
+```
+
+To make `npm` automatically compile assets when changes are saved to the files, run `npm run watch` and keep the window open. You will essentially have both the `npm run watch` **and** the `php artisan serve` windows open during front-end development.
+
+##### Adding assets
+
+When adding an asset to `/resources` (CSS, JS, or img file), edit the `webpack.mix.js` file in the project root directory so npm knows what to do with it.
+
+To simply copy a `CSS/JS` file to `/public`, add this line. Change the corresponding folders and file extensions, and make sure the filenames are the same:
+```js
+mix.copy('resources/assets/<filename>.css', 'public/css/<filename>.css');
+```
+To add a Sass file to the mix script for compilation, append this line:
+```js
+mix.sass('resources/assets/sass/creative.scss', 'public/css')
+```
+
+Images are automatically copied to `/public`, as long as it is in the `/resources/assets/img/` folder.
 ### Testing environment
 
 Our project is powered by TDD. Our code for testing is still under development, but we'll update this space with instructions on how to do testing when we're done.
@@ -74,12 +98,11 @@ Our project is powered by TDD. Our code for testing is still under development, 
 ### Todos
 
  - Write MORE Tests
- - Restructure stylesheets to accommodate Twitter Bootstrap
- - Create migrations and seeders for the database
- - Make controllers for the models
+ - Fix issues with navbar Javascript
+ - Make controllers for the models and connect it to the views
  - Get Milestone 5 done
  - Party hard
- - Integrate Gulp to automate PHPUnit testing and Sass stylesheet compilation
+ - Read on npm scripts to automate PHPUnit testing
 
 ### The Dev Team
 
@@ -95,7 +118,7 @@ MIT
 
 **Free Software, Hell Yeah!**
 
-[//]: #(These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
    [MySQL]: <https://www.mysql.com/>
