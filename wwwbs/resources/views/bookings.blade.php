@@ -1,13 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-
 <section>
     <div class="container">
         <div class="row">
-
-
-        
             <div class="col-md-1 center-block mx-auto">
                 <div id="datepicker" data-date="12/03/2012"></div>
         		<input type="hidden" id="my_hidden_input">
