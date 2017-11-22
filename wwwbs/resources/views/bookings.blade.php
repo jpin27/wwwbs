@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-1 center-block mx-auto">
-                <div id="datepicker" data-date="12/03/2012"></div>
+                <div id="datepicker" data-date="new Date"></div>
         		<input type="hidden" id="my_hidden_input">
             </div>
 
@@ -14,9 +14,15 @@
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li role="presentation"><a href="#">First Item</a></li>
-                        <li role="presentation"><a href="#">Second Item</a></li>
-                        <li role="presentation"><a href="#">Third Item</a></li>
+                    
+                        <li role="presentation"><a href="#">Dr. Jay</a></li>
+                        <li role="presentation"><a href="#">Dr. Hiba</a></li>
+                        <li role="presentation"><a href="#">Dr. Tayyab</a></li>
+                        <li role="presentation"><a href="#">Dr. Thrwat</a></li>
+                        <li role="presentation"><a href="#">Dr. Fahd</a></li>
+                        <li role="presentation"><a href="#">Dr. Charles</a></li>
+                        <li role="presentation"><a href="#">Dr. Brennan</a></li>
+                        <li role="presentation"><a href="#">Dr. Jesse</a></li>
                     </ul>
                 </div>
 
@@ -32,9 +38,10 @@
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="width:300px;padding:0px;background-color:#4C934C;height:34px;">Service Type</button>
                     <ul class="dropdown-menu" role="menu">
-                        <li role="presentation"><a href="#">First Item</a></li>
-                        <li role="presentation"><a href="#">Second Item</a></li>
-                        <li role="presentation"><a href="#">Third Item</a></li>
+                        <li role="presentation"><a href="#">Medical Appointment</a></li>
+                        <li role="presentation"><a href="#">Mental Health Assessment</a></li>
+                        <li role="presentation"><a href="#">Nutritional Counseling</a></li>
+                        <li role="presentation"><a href="#">Sexual Health Care</a></li>
                     </ul>
                 </div>
 

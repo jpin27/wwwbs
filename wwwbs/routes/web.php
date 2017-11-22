@@ -30,6 +30,10 @@ Route::get('test', function() {
 });
 
 
+Route::get('booking', function () {
+    return view('myBooking');
+});
+
 Route::get('bookappt', function () {
     return view('bookings');
 });

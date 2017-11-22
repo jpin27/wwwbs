@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+
     <div class="login-dark" style="background-color:#ffffff;">
         <form method="post" action="{{ route('login') }}">
         {{ csrf_field() }}
@@ -38,11 +39,13 @@
             <div class="form-group">
                 <div class="checkbox">
                     <label class="control-label">
-                        <input type="checkbox" {{ old('remember') ? 'checked' : '' }}>Remember me</label>
+                        <input type="checkbox" {{ old('remember') ? 'checked' : '' }}> Remember me</label>
                 </div>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit" style="background-color:#4C934C;">Log In</button>
-            </div><a href="{{ route('password.request') }}" class="forgot">Forgot your password?</a></form>
+            </div><a href="{{ route('password.request') }}" class="forgot">Forgot your password?</a><p></p>
+            <a href="{{ 'register' }}" class="forgot">Register here!</a></form>
     </div>
+
 @endsection
