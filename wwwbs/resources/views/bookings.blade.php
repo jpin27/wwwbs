@@ -1,8 +1,13 @@
 @extends('layouts.master')
+@section('headcontent')
 
+      <link rel="stylesheet" href="css/Footer-Basic.css">
+@endsection
 @section('content')
 <section>
+<body style="background-color:rgb(123,184,108)">
     <div class="container">
+      <h2 > Make a Booking </h2><br>
         <div class="row">
             <div class="col-md-1 center-block mx-auto">
                 <div id="datepicker" data-date="new Date"></div>
@@ -14,7 +19,7 @@
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
-                    
+
                         <li role="presentation"><a href="#">Dr. Jay</a></li>
                         <li role="presentation"><a href="#">Dr. Hiba</a></li>
                         <li role="presentation"><a href="#">Dr. Tayyab</a></li>
@@ -65,5 +70,7 @@
             </div>
         </div>
     </div>
+
+</body>
 </section>
 @endsection

@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -69,12 +69,12 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-        
-        //TODO: Edit this controller, backend. 
+
+        //TODO: Edit this controller, backend.
         $user->roles()->attach(
             Role::where('name', 'patient')->first()
         );
-        
+
         return $user;
     }
 }

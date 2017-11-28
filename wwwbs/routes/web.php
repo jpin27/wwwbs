@@ -29,6 +29,13 @@ Route::get('test', function() {
 	}
 });
 
+Route::get('add', function () {
+    return view('addStaff1');
+});
+
+Route::get('register1', function () {
+    return view('auth.Custom_register');
+});
 
 Route::get('booking', function () {
     return view('myBooking');

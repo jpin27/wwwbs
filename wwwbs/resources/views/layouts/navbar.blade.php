@@ -13,21 +13,42 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#services">Services</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#practitioners">Practitioners</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">About WWWBS</a>
         </li>
-        
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="log">Login</a>
-        </li>
+
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ 'log' }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ URL::to('register1') }}">Register</a></li>
+            @else
+
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                LOGOUT
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+
+                </li>
+            @endguest
+        </ul>
+
 
       </ul>
     </div>
-    
+
   </div>
 </nav>
