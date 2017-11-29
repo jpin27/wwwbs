@@ -1,6 +1,10 @@
 
 <!DOCTYPE html>
 
+<?php
+//require_once('C:\Users\User\Dropbox\School_Stuff\Comp_Science\CMPT370\Wacky-Waving-Wellness-Booking-System\wwwbs\resources\views\auth\user_queries.php');
+?>
+
 @extends('layouts.master')
 @section('headcontent')
 
