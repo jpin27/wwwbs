@@ -23,12 +23,22 @@
         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
 
-            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="Full Name">
+            <div class="form-group{{ $errors->has('firstName') ? ' has-error' : '' }}">
+                <input id="firstName" type="text" class="form-control" name="firstName" value="{{ old('firstName') }}" required placeholder="First Name">
 
-                @if ($errors->has('name'))
+                @if ($errors->has('firstName'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('name') }}</strong>
+                        <strong>{{ $errors->first('firstName') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <div class="form-group{{ $errors->has('lastName') ? ' has-error' : '' }}">
+                <input id="lastName" type="text" class="form-control" name="lastName" value="{{ old('lastName') }}" required placeholder="Last Name">
+
+                @if ($errors->has('lastName'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('lastName') }}</strong>
                     </span>
                 @endif
             </div>
