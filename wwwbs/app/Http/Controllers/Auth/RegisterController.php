@@ -54,6 +54,10 @@ class RegisterController extends Controller
             'lastName' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'nsid' => 'required|string|max:6|unique:users',
+            // // 'healthNumber' => 'string|max:15|unique:users',
+            // 'birthDate' => 'string|max:15',
+            // 'address' => 'string|max:255',
         ]);
     }
 
@@ -70,6 +74,10 @@ class RegisterController extends Controller
             'lastName' => $data['lastName'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'nsid' => $data['nsid'],
+            // // 'healthNumber' => $data['healthNumber'],
+            // 'birthDate' => $data['birthDate'],
+            // 'address' => $data['address'],
         ]);
 
         //TODO: Edit this controller, backend.

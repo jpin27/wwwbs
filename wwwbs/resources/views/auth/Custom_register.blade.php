@@ -65,17 +65,43 @@
             <div class="form-group">
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
             </div>
+
+            <div class="form-group{{ $errors->has('nsid') ? ' has-error' : '' }}">
+              <input id="nsid" type="text" class="form-control" name="nsid" value="{{ old('nsid') }}" required placeholder="NSID" pattern="(^[a-z]{3}[0-9]{3}$)">
+
+              @if ($errors->has('nsid'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('nsid') }}</strong>
+                  </span>
+              @endif
+            </div>
+
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="NSID">
+                <input type="text" class="form-control" placeholder="Health Number" >
+                <!-- @if ($errors->has('healthNumber'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('healthNumber') }}</strong>
+                    </span>
+                @endif -->
+
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Health Number">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text"  placeholder="Date of Birth (yyyy-mm-dd)" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
+                <input type="text" class="form-control"  placeholder="Date of Birth (yyyy-mm-dd)" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
+                <!-- @if ($errors->has('birthDate'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('birthDate') }}</strong>
+                    </span>
+                @endif -->
+
             </div>
             <div class="form-group">
                 <input class="form-control" type="text" placeholder="Address">
+                <!-- @if ($errors->has('address'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('address') }}</strong>
+                    </span>
+                @endif -->
+
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit">Register</button>
