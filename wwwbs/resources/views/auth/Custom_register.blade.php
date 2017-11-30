@@ -77,30 +77,15 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Health Number" >
-                <!-- @if ($errors->has('healthNumber'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('healthNumber') }}</strong>
-                    </span>
-                @endif -->
+                <input id="healthNumber" type="text" class="form-control" name="healthNumber" value="{{ old('healthNumber') }}" placeholder="Health Number (xxxxxxxxx)" pattern="^([0-9]{9})$">
 
             </div>
             <div class="form-group">
-                <input type="text" class="form-control"  placeholder="Date of Birth (yyyy-mm-dd)" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
-                <!-- @if ($errors->has('birthDate'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('birthDate') }}</strong>
-                    </span>
-                @endif -->
+                <input id="birthDate" type="text" class="form-control" name="birthDate" value="{{ old('birthDate') }}" placeholder="Date of Birth (yyyy-mm-dd)" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
 
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Address">
-                <!-- @if ($errors->has('address'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('address') }}</strong>
-                    </span>
-                @endif -->
+                <input id="address" class="form-control" type="text" name="address" value="{{ old('address') }}" placeholder="Address">
 
             </div>
             <div class="form-group">

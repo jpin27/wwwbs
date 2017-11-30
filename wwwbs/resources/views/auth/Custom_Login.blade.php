@@ -10,17 +10,12 @@
 
 @section('content')
 <section>
-
-    <div class="container" style="background-color:#ffffff;">
+<body style="background-color:rgb(123,184,108)">
+    <div class="container" >
         <form method="post" action="{{ route('login') }}">
         {{ csrf_field() }}
             <h2 class="sr-only">Login Form</h2>
-            <div class="illustration">
-                <div class="form-group">
-                    <button class="btn btn-success" type="button" id="bg-image" style="background-color:#4C934C;width:100%;height:34px;background-repeat:no-repeat;background-position:left;background-size:25px;"><img src="/img/paws.png" height=20px> Login with PAWS</button>
-                </div>
-                <p style="font-size:25px;color:#4C934C; text-align:center;">OR</p>
-            </div>
+
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                 <input class="form-control" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                   @if ($errors->has('email'))
@@ -45,9 +40,9 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit" style="background-color:#4C934C;">Log In</button>
-            </div><div style="text-align:center"><a href="{{ route('password.request') }}" class="forgot">Forgot your password?</a><p></p>
+            </div><div style="text-align:center"><a href="{{ URL::to('resetpass') }}" class="forgot">Forgot your password?</a><p></p>
             <a href="{{ URL::to('register1') }}" class="forgot">Register!</a></div></form>
     </div>
-
+</body>
 </section>
 @endsection

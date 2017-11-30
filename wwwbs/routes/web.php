@@ -56,6 +56,11 @@ Route::get('addStaff', function () {
 Route::get('log', function () {
     return view('auth.Custom_Login');
 });
+
+Route::get('resetpass', function () {
+    return view('auth.passwords.email');
+});
+
 // boop
 
 Auth::routes();

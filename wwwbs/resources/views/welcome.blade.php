@@ -59,7 +59,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
 					<a href="{{ url('/bookappt') }}">
-						<i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+						<i class="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Mental Health Assessment</h3>
 					<p class="text-muted mb-0">Professional assistance with mental health and counselling</p>
@@ -81,7 +81,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
 					<a href="{{ url('/bookappt') }}">
-						<i class="fa fa-4x fa-wheelchair text-primary mb-3 sr-icons"></i>
+						<i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Sexual Health Care</h3>
 					<p class="text-muted mb-0">Contraception counselling and STI prevention, testing and treatment</p>
@@ -95,7 +95,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
 					<a href="{{ url('/bookappt') }}">
-						<i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+						<i class="fa fa-4x fa-wheelchair-alt text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Physiotherapy</h3>
 					<p class="text-muted mb-0">Make an appointment with a physiotherapist</p>
@@ -105,7 +105,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
 					<a href="{{ url('/bookappt') }}">
-						<i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+						<i class="fa fa-4x fa-bed text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Massage Therapy</h3>
 					<p class="text-muted mb-0">Make an appointment with a massage therapist</p>
@@ -115,7 +115,7 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
 					<a href="{{ url('/bookappt') }}">
-						<i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+						<i class="fa fa-4x fa-gear text-primary mb-3 sr-icons"></i>
 					</a>
 					<h3 class="mb-3">Chiropractice</h3>
 					<p class="text-muted mb-0">Make an appointment with a chiropractor</p>

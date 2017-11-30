@@ -1,10 +1,8 @@
 @extends('layouts.master')
-@section('content')
+@section('headcontent')
 
 <!DOCTYPE html>
-<html>
 
-<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
@@ -16,18 +14,22 @@
     <link rel="stylesheet" href="css/Login-Form-Dark.css">
     <link rel="stylesheet" href="css/Navigation-with-Button1.css">
     <link rel="stylesheet" href="css/styles.css">
-</head>
 
-<body>
+@endsection
+
+@section('content')
+
+  <section>
+    <body style="background-color:rgb(123,184,108)">
     <div class="container">
         <p> </p>
-        
+
     </div>
     <div class="container">
-        <p class="lead" style="color:#4C934C;">My Bookings</p>
+        <h2> My Bookings </h2><br>
         <div id="center" style="background-color:#eeeeee;"><span> You have no bookings right now</span></div>
         <p> </p>
-        <div class="table-responsive">
+        <!-- <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -59,11 +61,9 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> -->
     <script src="js/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
-
-</html>
 
 @endsection
