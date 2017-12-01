@@ -58,6 +58,7 @@ class RegisterController extends Controller
             'healthNumber' => 'string|max:15|unique:users',
             'birthDate' => 'string|max:15',
             'address' => 'string|max:255',
+            'subRole' => 'string|max:255',
         ]);
     }
 
@@ -78,6 +79,7 @@ class RegisterController extends Controller
             'healthNumber' => $data['healthNumber'],
             'birthDate' => $data['birthDate'],
             'address' => $data['address'],
+            'subRole' => $data['subRole'],
         ]);
 
         //TODO: Edit this controller, backend.

@@ -88,6 +88,11 @@
                 <input id="address" class="form-control" type="text" name="address" value="{{ old('address') }}" placeholder="Address">
 
             </div>
+
+            <div class="form-group">
+                <input id="subRole" class="form-control" type="hidden" name="subRole" value="student">
+
+            </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit">Register</button>
             </div>
