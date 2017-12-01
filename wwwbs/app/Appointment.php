@@ -13,7 +13,7 @@ class Appointment extends Model
      * @var array
      */
     protected $fillable = [
-        'doctor_id', 'date', 'time', 'brief-desc', 'full-desc',
+        'doctor_id', 'date', 'time', 'brief_desc', 'full_desc',
         'completed', 'cancelled', 'nsid',
     ];
 

@@ -30,8 +30,8 @@ class CreateAppointmentsTable extends Migration
             $table->date('date');
             $table->time('time');
 
-            $table->string('brief-desc');
-            $table->text('full-desc');
+            $table->string('brief_desc');
+            $table->text('full_desc');
             $table->boolean('completed')->default(false);
             $table->boolean('canceled')->default(false);
 

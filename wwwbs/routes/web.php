@@ -39,9 +39,6 @@ Route::get('register1', function () {
     return view('auth.Custom_register');
 });
 
-Route::get('booking', function () {
-    return view('myBooking');
-});
 
 Route::get('bookappt', function () {
     return view('bookings');
