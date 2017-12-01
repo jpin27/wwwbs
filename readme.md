@@ -16,12 +16,10 @@ Wacky Waving Wellness Booking System (WWWBS) is Saskatchewan's first online book
 
 WWWBS uses the following technologies and open source projects to work properly:
 
-* [Vue.js] - HTML enhanced for web apps!
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [Laravel] - the coolest PHP framework ever
 * [Sass] - basically, CSS with superpowers. a stable professional-grade CSS extension language
 * [Composer] - dependency manager for Laravel
-* [Gulp] - the streaming build system
 * [MySQL] - for database access
 * [PHP] - duh
 
@@ -97,10 +95,8 @@ Our project is powered by TDD. Our code for testing is still under development, 
 
 ### Todos
 
- - Write MORE Tests
- - Fix issues with navbar Javascript
  - Make controllers for the models and connect it to the views
- - Get Milestone 5 done
+ - Make an awesome presentation
  - Party hard
  - Read on npm scripts to automate PHPUnit testing
 
