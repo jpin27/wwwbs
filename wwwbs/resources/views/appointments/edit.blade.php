@@ -1,17 +1,65 @@
 @extends('layouts.master')
-@section('headcontent')
 
-      <link rel="stylesheet" href="css/Footer-Basic.css">
+
+@section('headcontent')
+    <link rel="stylesheet" href="css/Footer-Basic.css">
 @endsection
+
+
 @section('content')
+
 <section>
 <body style="background-color:rgb(123,184,108)">
+
+
+
+<h1>Edit Appointment - Appointment Name </h1>
+<p class="lead">Edit the details of your appointment below, or <a href="{{ route('appointments.index') }}">go back to all tasks.</a></p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{!! Form::model($appointment, [
+    'method' => 'PATCH',
+    'route' => ['appointments.update', $appointment->id]
+]) !!}
+
+
+
     <div class="container">
-      <h2 > Make a Booking </h2><br>
+
+        {{-- Show error messages --}}
+        @include('layouts.errors')
+
+        {{-- Show success message --}}
+        @if(Session::has('flash_message'))
+            <div class="alert alert-success">
+                {{ Session::get('flash_message') }}
+            </div>
+        @endif
+
+
+
+
+
+
+
+
         <div class="row">
             <div class="col-md-1 center-block mx-auto">
                 <div id="datepicker" data-date="new Date"></div>
-        		<input type="hidden" id="my_hidden_input">
+                <input type="hidden" id="my_hidden_input">
             </div>
 
             <div class="col-md-4 center-block mx-auto">
@@ -19,11 +67,16 @@
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
-                        @foreach ($doctors as $doctor)
-                            <li role="presentation"><a href="#">Dr. {{$doctor->lastName}}</a></li>
-                        @endforeach;
-                    </ul>
 
+                        <li role="presentation"><a href="#">Dr. Jay</a></li>
+                        <li role="presentation"><a href="#">Dr. Hiba</a></li>
+                        <li role="presentation"><a href="#">Dr. Tayyab</a></li>
+                        <li role="presentation"><a href="#">Dr. Thrwat</a></li>
+                        <li role="presentation"><a href="#">Dr. Fahd</a></li>
+                        <li role="presentation"><a href="#">Dr. Charles</a></li>
+                        <li role="presentation"><a href="#">Dr. Brennan</a></li>
+                        <li role="presentation"><a href="#">Dr. Jesse</a></li>
+                    </ul>
                 </div>
 
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
@@ -51,21 +104,39 @@
 
         <div class="row">
             <div class="col-md-12" style="padding:35px 0px;">
+
+
                 <form>
+               
+
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Brief Description">
+                        {{ Form::label('brief_desc', 'Brief Description:', ['class' => 'control-label']) }}
+                        {{ Form::text('brief_desc', null, ['class' => 'form-control']) }}
                     </div>
+
+
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Detailed Description (optional)"></textarea>
+                        {{ Form::label('full_desc', 'Other details:', ['class' => 'control-label']) }}
+                        {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }} 
                     </div>
+
+
+                    
                     <div class="form-group">
-                        <button class="btn btn-success" type="button" style="background-color:#4C934C;">Save </button>
+                        {{ Form::submit('Update Appointment', ['class' => 'btn btn-primary']) }}
                     </div>
                 </form>
+
+
             </div>
         </div>
     </div>
 
+{{ Form::close() }}
+
+
 </body>
 </section>
+
+
 @endsection
