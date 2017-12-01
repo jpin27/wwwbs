@@ -19,8 +19,8 @@ $factory->define(App\Appointment::class, function (Faker $faker) {
     return [
         'date' => $faker->date,
         'time' => $faker->time,
-        'brief_desc' => $faker->sentence($nbWords = 6, $variableNbWords = true),
-        'full_desc' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
+        'brief-desc' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'full-desc' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
         'completed' => $faker->boolean,
         'canceled' => $faker->boolean,
 
