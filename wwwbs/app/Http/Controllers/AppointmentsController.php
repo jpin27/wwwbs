@@ -74,9 +74,16 @@ class AppointmentsController extends Controller
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
+    //public function show(Appointment $appointment)
     public function show(Appointment $appointment)
     {
-        //
+
+        // Once again, Laravel is awesome. Look at this one line of code!
+        // Relevant Laracast video on Route-Model binding:
+        // https://laracasts.com/series/laravel-from-scratch-2017/episodes/9?autoplay=true
+
+        return view('appointments.show')->withAppointment($appointment);
+
     }
 
     /**
@@ -88,6 +95,7 @@ class AppointmentsController extends Controller
     public function edit(Appointment $appointment)
     {
         //
+        return view('appointments.edit')->withAppointment($appointment);
     }
 
     /**
@@ -99,7 +107,22 @@ class AppointmentsController extends Controller
      */
     public function update(Request $request, Appointment $appointment)
     {
-        //
+        // This is pretty much like store() above but with slight adjustments.
+
+        // Tayyab: Make sure that this validator is the same as the validator above for
+        // the store() method.
+        $this->validate($request, [
+            'brief_desc' => 'required',
+            'full_desc' => 'required'
+        ]);
+
+        // Grab the input, then update the appointment
+        $input = $request->all();
+        $appointment->fill($input)->save();
+
+        // return with amazing success
+        Session::flash('flash_message', 'Appointment successfully updated!');
+        return redirect()->back();
     }
 
     /**
@@ -111,5 +134,9 @@ class AppointmentsController extends Controller
     public function destroy(Appointment $appointment)
     {
         //
+        $appointment->delete();
+
+        Session::flash('flash_message', 'Appointment successfully cancelled.');
+        return redirect()->route('appointments.index');
     }
 }

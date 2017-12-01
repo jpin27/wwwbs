@@ -8,36 +8,46 @@
 
 @section('content')
 
-
-
-
-
-
 <section>
 <body style="background-color:rgb(123,184,108)">
 
 
-	{{ Form::open([
-	    'route' => 'appointments.store'
-	]) }}
+
+<h1>Edit Appointment - Appointment Name </h1>
+<p class="lead">Edit the details of your appointment below, or <a href="{{ route('appointments.index') }}">go back to all tasks.</a></p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{!! Form::model($appointment, [
+    'method' => 'PATCH',
+    'route' => ['appointments.update', $appointment->id]
+]) !!}
 
 
 
     <div class="container">
 
-    	<h1>Book an Appointment</h1>
-		<p class="lead">Add to your appointment list below.</p>
-		<hr>
+        {{-- Show error messages --}}
+        @include('layouts.errors')
 
-		{{-- Show error messages --}}
-		@include('layouts.errors')
-
-		{{-- Show success message --}}
-		@if(Session::has('flash_message'))
-		    <div class="alert alert-success">
-		        {{ Session::get('flash_message') }}
-		    </div>
-		@endif
+        {{-- Show success message --}}
+        @if(Session::has('flash_message'))
+            <div class="alert alert-success">
+                {{ Session::get('flash_message') }}
+            </div>
+        @endif
 
 
 
@@ -49,7 +59,7 @@
         <div class="row">
             <div class="col-md-1 center-block mx-auto">
                 <div id="datepicker" data-date="new Date"></div>
-        		<input type="hidden" id="my_hidden_input">
+                <input type="hidden" id="my_hidden_input">
             </div>
 
             <div class="col-md-4 center-block mx-auto">
@@ -100,20 +110,20 @@
                
 
                     <div class="form-group">
-					    {{ Form::label('brief_desc', 'Brief Description:', ['class' => 'control-label']) }}
-					    {{ Form::text('brief_desc', null, ['class' => 'form-control']) }}
-					</div>
+                        {{ Form::label('brief_desc', 'Brief Description:', ['class' => 'control-label']) }}
+                        {{ Form::text('brief_desc', null, ['class' => 'form-control']) }}
+                    </div>
 
 
-					<div class="form-group">
-					    {{ Form::label('full_desc', 'Other details:', ['class' => 'control-label']) }}
-					    {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }} 
-					</div>
+                    <div class="form-group">
+                        {{ Form::label('full_desc', 'Other details:', ['class' => 'control-label']) }}
+                        {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }} 
+                    </div>
 
 
                     
                     <div class="form-group">
-                        {{ Form::submit('Book Appointment', ['class' => 'btn btn-primary']) }}
+                        {{ Form::submit('Update Appointment', ['class' => 'btn btn-primary']) }}
                     </div>
                 </form>
 
@@ -123,6 +133,7 @@
     </div>
 
 {{ Form::close() }}
+
 
 </body>
 </section>

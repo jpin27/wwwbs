@@ -61,6 +61,13 @@
 
   <section>
     <body style="background-color:rgb(123,184,108)">
+
+    @if(Session::has('flash_message'))
+            <div class="alert alert-success">
+                {{ Session::get('flash_message') }}
+            </div>
+        @endif
+        
     <div class="container">
 
 
