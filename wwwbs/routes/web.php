@@ -44,9 +44,12 @@ Route::get('booking', function () {
 Route::get('bookappt', function () {
 	// select * from users where id in (select user_id from role_user where role_id=2);
 	$docs_id = DB::table('role_user')
-						->where('role_id', '2')
-						->get();
-	$doctors = DB::table('users')->where('id', $docs_id)->union($docs_id)->get();
+				-> where ('role_id', '2')
+				-> value('user_id');
+
+	$doctors = DB::table('users')
+				-> whereIn ('id', [1,2,3,4,5,6,7,8,9,10,11,12])
+				->get();
 
     return view('bookings', compact('doctors'));
 });
