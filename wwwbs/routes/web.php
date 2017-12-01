@@ -42,7 +42,13 @@ Route::get('booking', function () {
 });
 
 Route::get('bookappt', function () {
-    return view('bookings');
+	// select * from users where id in (select user_id from role_user where role_id=2);
+	$docs_id = DB::table('role_user')
+						->where('role_id', '2')
+						->get();
+	$doctors = DB::table('users')->where('id', $docs_id)->union($docs_id)->get();
+
+    return view('bookings', compact('doctors'));
 });
 
 Route::get('master', function () {
