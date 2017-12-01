@@ -16,7 +16,7 @@ class AppointmentsController extends Controller
     {
 
         //
-        
+
         return view('appointments.index');
     }
 
@@ -42,6 +42,14 @@ class AppointmentsController extends Controller
     public function store(Request $request)
     {
         //
+
+        //dd($request->all());
+
+        $input = $request->all();
+
+        Appointment::create($input);
+
+        return redirect()->back();
     }
 
     /**

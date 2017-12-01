@@ -6,23 +6,23 @@
 <p class="lead">Add to your appointment list below.</p>
 <hr>
 
-{!! Form::open([
+{{ Form::open([
     'route' => 'appointments.store'
-]) !!}
+]) }}
 
 <div class="form-group">
-    {!! Form::label('title', 'Brief Description:', ['class' => 'control-label']) !!}
-    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+    {{ Form::label('brief-desc', 'Brief Description:', ['class' => 'control-label']) }}
+    {{ Form::text('brief-desc', null, ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">
-    {!! Form::label('description', 'Other details:', ['class' => 'control-label']) !!}
-    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+    {{ Form::label('full-desc', 'Other details:', ['class' => 'control-label']) }}
+    {{ Form::textarea('full-desc', null, ['class' => 'form-control']) }} 
 </div>
 
-{!! Form::submit('Book Appointment', ['class' => 'btn btn-primary']) !!}
+{{ Form::submit('Book Appointment', ['class' => 'btn btn-primary']) }}
 
-{!! Form::close() !!}
+{{ Form::close() }}
 
 @endsection
 
