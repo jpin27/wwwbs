@@ -57,6 +57,11 @@
                 <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
+					
+					
+					
+					
+					
                         @foreach ($doctors as $doctor)
                             <li role="presentation"><a href="#">Dr. {{$doctor->lastName}}</a></li>
                         @endforeach;

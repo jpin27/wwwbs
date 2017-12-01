@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Appointment;
+use App\User;
 use Session;
 use Illuminate\Http\Request;
 
@@ -33,8 +34,34 @@ class AppointmentsController extends Controller
      */
     public function create()
     {
-        //Done. Don't touch.
-        return view('appointments.create');
+
+        // select * from users where id in (select user_id from role_user where role_id=2);
+        // $docs_id = DB::table('role_user')
+        //             -> where ('role_id', '2')
+        //             -> value('user_id');
+
+        // $doctors = DB::table('users')
+        //             -> whereIn ('id', [1,2,3,4,5,6,7,8,9,10,11,12])
+        //             ->get();
+
+        // Dear Tayyab:
+        // I'm just editing your query above to make it use Eloquent in Laravel.
+        // It's literally just the same, but it uses the User model instead of using 
+        // the Query Builder.
+        //
+        // Eloquent and Query Builder are two different ways on looking up the database.
+        // QB is faster on large datasets, but Eloquent is more readable.
+
+        //TODO: I see what you did here, hardcoding the id. LOL.
+        // My research took me to "pivot table Eloquent" and "join query eloquent"
+        // to try and find a way to join the two tables in one query.
+        //
+        // I'm sorry I'm drifting you away from your SQL comfort zone with this project. 
+        $doctors = User::whereIn('id', [1,2,3,4,5,6,7,8,9,10,11,12])
+                    ->get();
+
+        
+        return view('appointments.create', compact('doctors'));
     }
 
     /**
