@@ -11,6 +11,10 @@ class AppointmentsTableSeeder extends Seeder
      */
     public function run()
     {
+
+    	// start with a fresh db
+    	DB::table('appointments')->delete();
+
         factory(App\Appointment::class, 8)->create();    
     }
 }

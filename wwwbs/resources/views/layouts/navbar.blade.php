@@ -1,43 +1,75 @@
-{{-- Thanks for the code, Bootstrap! You da best! --}}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
 
-<header class="masthead">
-  <h3 class="text-muted">USask Health Centre Banner here LOL</h3>
 
-  <nav class="navbar navbar-expand-md navbar-light bg-light rounded mb-3">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+      <img src="/img/uofslogo-black.png" height="40">
+
+    </a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav text-md-center nav-justified w-100">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('/bookappt') }}">My Bookings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Practitioners</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">My Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#practitioners">Practitioners</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About WWWBS</a>
+        </li>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    {{-- formerly href="{{ route('login') }} --}}
+                  <a class="nav-link js-scroll-trigger" href="{{ 'log' }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    {{-- formerly href="{{ route('register') }} --}}
+                  <a class="nav-link js-scroll-trigger" href="{{ URL::to('register1') }}">Register</a>
+                </li>
+            @else
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                        {{ Auth::user()->firstName }} {{ Auth::user()->lastName }}
+                        <span class="caret"></span>
+                    </a>
 
 
-        {{-- 
-  		Dropdown component. We don't need it now, but we might need it soon. 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> --}}
+                    <ul class="dropdown-menu">
+
+                            <a  class="nav-link js-scroll-trigger" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+
+                    </ul>
+
+        </li>
+            @endguest
 
         </ul>
-      </div>
-  </nav>
-</header>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -27,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,9 +50,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'firstName' => 'required|string|max:255',
+            'lastName' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'nsid' => 'required|string|max:6|unique:users',
+            'healthNumber' => 'string|max:15|unique:users',
+            'birthDate' => 'string|max:15',
+            'address' => 'string|max:255',
         ]);
     }
 
@@ -63,9 +70,21 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'firstName' => $data['firstName'],
+            'lastName' => $data['lastName'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'nsid' => $data['nsid'],
+            'healthNumber' => $data['healthNumber'],
+            'birthDate' => $data['birthDate'],
+            'address' => $data['address'],
         ]);
+
+        //TODO: Edit this controller, backend.
+        $user->roles()->attach(
+            Role::where('name', 'patient')->first()
+        );
+
+        return $user;
     }
 }

@@ -19,6 +19,7 @@ class CreateAppointmentsTable extends Migration
         */
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('doctor_id');
 
             // TODO: Find out what the fuck is all that $fillable[] shit is about
 
@@ -28,6 +29,7 @@ class CreateAppointmentsTable extends Migration
             // then declare the table columns 
             $table->date('date');
             $table->time('time');
+
             $table->string('brief-desc');
             $table->text('full-desc');
             $table->boolean('completed')->default(false);

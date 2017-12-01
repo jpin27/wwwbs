@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,10 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-    	// Call the seeds to seed the database
+    	// SUMMON THE SEEDS
     	$this->call([
-        	PatientsTableSeeder::class,
-        	DoctorsTableSeeder::class,
+            RolesTableSeeder::class,
+            UsersTableSeeder::class,
         	AppointmentsTableSeeder::class,
     	]);
 
