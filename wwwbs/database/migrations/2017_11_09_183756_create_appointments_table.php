@@ -15,7 +15,7 @@ class CreateAppointmentsTable extends Migration
     {
         /*
          / Create the schema for the Appointments table. Laravel is so cool we
-         / don't even need to type any kind of SQL to make tables. 
+         / don't even need to type any kind of SQL to make tables.
         */
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
@@ -26,12 +26,12 @@ class CreateAppointmentsTable extends Migration
             // TODO: declare the foreign keys
             // maybe this is handled by Eloquent?
 
-            // then declare the table columns 
+            // then declare the table columns
             $table->date('date');
             $table->time('time');
 
-            $table->string('brief-desc');
-            $table->text('full-desc');
+            $table->string('brief_desc');
+            $table->text('full_desc');
             $table->boolean('completed')->default(false);
             $table->boolean('canceled')->default(false);
 

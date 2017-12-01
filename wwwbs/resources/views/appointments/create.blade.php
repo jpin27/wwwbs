@@ -1,13 +1,51 @@
 @extends('layouts.master')
-@section('headcontent')
 
-      <link rel="stylesheet" href="css/Footer-Basic.css">
+
+@section('headcontent')
+    <link rel="stylesheet" href="css/Footer-Basic.css">
 @endsection
+
+
 @section('content')
+
+
+
+
+
+
 <section>
 <body style="background-color:rgb(123,184,108)">
+
+
+	{{ Form::open([
+	    'route' => 'appointments.store'
+	]) }}
+
+
+
     <div class="container">
-      <h2 > Make a Booking </h2><br>
+
+    	<h1>Book an Appointment</h1>
+		<p class="lead">Add to your appointment list below.</p>
+		<hr>
+
+		{{-- Show error messages --}}
+		@include('layouts.errors')
+
+		{{-- Show success message --}}
+		@if(Session::has('flash_message'))
+		    <div class="alert alert-success">
+		        {{ Session::get('flash_message') }}
+		    </div>
+		@endif
+
+
+
+
+
+
+
+
         <div class="row">
             <div class="col-md-1 center-block mx-auto">
                 <div id="datepicker" data-date="new Date"></div>
@@ -50,17 +88,14 @@
                  <option value="21">Travel Immunization</option>
         </select>
 
-                <!-- <div class="dropdown" style="margin:10px 0px 0px 0px;">
+                <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="#">Dr. Jay</a></li>
-                            <li role="presentation"><a href="#">Dr. Hiba</a></li>
-                            <li role="presentation"><a href="#">Dr. Tayyab</a></li>
-                            <li role="presentation"><a href="#">Dr. Thrwat</a></li>
-                            <li role="presentation"><a href="#">Dr. Fahd</a></li>
-                            <li role="presentation"><a href="#">Dr. Charles</a></li>
-                            <li role="presentation"><a href="#">Dr. Brennan</a></li>
-                            <li role="presentation"><a href="#">Dr. Jesse</a></li>
+
+				
+                        @foreach ($doctors as $doctor)
+                            <li role="presentation"><a href="#">Dr. {{$doctor->lastName}}</a></li>
+                        @endforeach;
                     </ul>
 
                 </div>
@@ -82,28 +117,45 @@
                         <li role="presentation"><a href="#">Nutritional Counseling</a></li>
                         <li role="presentation"><a href="#">Sexual Health Care</a></li>
                     </ul>
-                </div> -->
+                </div> 
             </div>
 
         </div>
 
         <div class="row">
             <div class="col-md-12" style="padding:35px 0px;">
+
+
                 <form>
+               
+
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Brief Description">
-                    </div>
+					    {{ Form::label('brief_desc', 'Brief Description:', ['class' => 'control-label']) }}
+					    {{ Form::text('brief_desc', null, ['class' => 'form-control']) }}
+					</div>
+
+
+					<div class="form-group">
+					    {{ Form::label('full_desc', 'Other details:', ['class' => 'control-label']) }}
+					    {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }} 
+					</div>
+
+
+                    
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Detailed Description (optional)"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-success" type="button" style="background-color:#4C934C;">Save </button>
+                        {{ Form::submit('Book Appointment', ['class' => 'btn btn-primary']) }}
                     </div>
                 </form>
+
+
             </div>
         </div>
     </div>
 
+{{ Form::close() }}
+
 </body>
 </section>
+
+
 @endsection
