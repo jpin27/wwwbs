@@ -17,6 +17,8 @@
 */
 Route::get('/', 'Controller@index');
 
+Route::resource('appointments', 'AppointmentsController');
+
 /*
  / Tiny little module to test database connection.
  / This is at http://localhost:8080/test.
