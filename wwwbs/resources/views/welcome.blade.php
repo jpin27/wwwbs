@@ -46,22 +46,25 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 	<div class="container">
 		<div class="row">
 
+			@guest
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-stethoscope text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Medical Appointment</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Medical Appointment</a></h3>
 					<p class="text-muted mb-0">Doctor and nurse appointments</p>
 				</div>
 			</div>
 
+
+
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Mental Health Assessment</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Mental Health Assessment</a></h3>
 					<p class="text-muted mb-0">Professional assistance with mental health and counselling</p>
 				</div>
 			</div>
@@ -69,10 +72,10 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-cutlery text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Nutritional Counseling</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Nutritional Counseling</a></h3>
 					<p class="text-muted mb-0">Meet with a dietitian</p>
 				</div>
 			</div>
@@ -80,10 +83,10 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Sexual Health Care</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Sexual Health Care</a></h3>
 					<p class="text-muted mb-0">Contraception counselling and STI prevention, testing and treatment</p>
 				</div>
 			</div>
@@ -94,44 +97,132 @@ Remember the @yield('content') in layouts/master.blade.php? Well, this is the se
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-wheelchair-alt text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Physiotherapy</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Physiotherapy</a></h3>
 					<p class="text-muted mb-0">Make an appointment with a physiotherapist</p>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-bed text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">MassageTherapy</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">MassageTherapy</a></h3>
 					<p class="text-muted mb-0">Make an appointment with a massage therapist</p>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-gear text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Chiropractice</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Chiropractice</a></h3>
 					<p class="text-muted mb-0">Make an appointment with a chiropractor</p>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 text-center">
 				<div class="service-box mt-5 mx-auto">
-					<a href="{{ url('/bookappt') }}">
+					<a href="{{ URL::to('log') }}">
 						<i class="fa fa-4x fa-plane text-primary mb-3 sr-icons"></i>
 					</a>
-					<h3 class="mb-3"><a href="{{ url('/bookappt') }}" style="color:black;">Travel Immunization</a></h3>
+					<h3 class="mb-3"><a href="{{ URL::to('log') }}" style="color:black;">Travel Immunization</a></h3>
 					<p class="text-muted mb-0">Get vaccination for Hepatitis A and/or B before short-term travel</p>
 				</div>
 			</div>
 
+			@else
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-stethoscope text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Medical Appointment</a></h3>
+					<p class="text-muted mb-0">Doctor and nurse appointments</p>
+				</div>
+			</div>
+
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Mental Health Assessment</a></h3>
+					<p class="text-muted mb-0">Professional assistance with mental health and counselling</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-cutlery text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Nutritional Counseling</a></h3>
+					<p class="text-muted mb-0">Meet with a dietitian</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Sexual Health Care</a></h3>
+					<p class="text-muted mb-0">Contraception counselling and STI prevention, testing and treatment</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-wheelchair-alt text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Physiotherapy</a></h3>
+					<p class="text-muted mb-0">Make an appointment with a physiotherapist</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-bed text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">MassageTherapy</a></h3>
+					<p class="text-muted mb-0">Make an appointment with a massage therapist</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-gear text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Chiropractice</a></h3>
+					<p class="text-muted mb-0">Make an appointment with a chiropractor</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<a href="{{ URL::to('/appointments/create') }}">
+						<i class="fa fa-4x fa-plane text-primary mb-3 sr-icons"></i>
+					</a>
+					<h3 class="mb-3"><a href="{{ URL::to('/appointments/create') }}" style="color:black;">Travel Immunization</a></h3>
+					<p class="text-muted mb-0">Get vaccination for Hepatitis A and/or B before short-term travel</p>
+				</div>
+			</div>
+
+
+			@endguest
 		</div>
 
 	</div>
