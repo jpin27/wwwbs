@@ -55,9 +55,9 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'nsid' => 'required|string|max:6|unique:users',
-            'healthNumber' => 'string|max:15|unique:users',
-            'birthDate' => 'string|max:15',
-            'address' => 'string|max:255',
+            'healthNumber' => 'required|string|max:15|unique:users',
+            'birthDate' => 'required|string|max:15',
+            'address' => 'required|string|max:255',
             'subRole' => 'string|max:255',
         ]);
     }

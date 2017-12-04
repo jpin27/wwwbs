@@ -41,9 +41,7 @@
 
 
 
-
-
-
+      <form>
 
 
         <div class="row">
@@ -52,18 +50,15 @@
         		<input type="hidden" id="my_hidden_input">
             </div>
 
+
+
             <div class="col-md-3 center-block mx-auto">
 
               <select style="margin:30px 0px 0px 0px; width:300px; background-color:rgb(65,150,65); color:#ffff;">
                      <option> Select Practitioner</option>
-                     <option value="1">Dr. Jay</option>
-                     <option value="2">Dr. Hiba</option>
-                     <option value="3">Dr. Tayyab</option>
-                     <option value="4">Dr. Thrwat</option>
-                     <option value="5">Dr. Fahd</option>
-                     <option value="6">Dr. Charles</option>
-                     <option value="7">Dr. Jesse</option>
-                     <option value="8">Dr. Brennan</option>
+                     @foreach ($doctors as $doctor)
+                          <option>Dr. {{$doctor->lastName}} </option>
+                     @endforeach;
 
             </select>
 
@@ -88,28 +83,28 @@
                  <option value="21">Travel Immunization</option>
         </select>
 
-                <div class="dropdown" style="margin:10px 0px 0px 0px;">
+                <!-- <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:#4C934C;width:300px;">Select Practitioner </button>
                     <ul class="dropdown-menu" role="menu">
 
-				
+
                         @foreach ($doctors as $doctor)
                             <li role="presentation"><a href="#">Dr. {{$doctor->lastName}}</a></li>
                         @endforeach;
                     </ul>
 
-                </div>
+                </div> -->
 
-                <div class="dropdown" style="margin:10px 0px 0px 0px;">
+                <!-- <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="width:300px;padding:0px;background-color:#4C934C;height:34px;">Select Time </button>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a href="#">First Item</a></li>
                         <li role="presentation"><a href="#">Second Item</a></li>
                         <li role="presentation"><a href="#">Third Item</a></li>
                     </ul>
-                </div>
+                </div> -->
 
-                <div class="dropdown" style="margin:10px 0px 0px 0px;">
+                <!-- <div class="dropdown" style="margin:10px 0px 0px 0px;">
                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="width:300px;padding:0px;background-color:#4C934C;height:34px;">Service Type</button>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a href="#">Medical Appointment</a></li>
@@ -117,7 +112,7 @@
                         <li role="presentation"><a href="#">Nutritional Counseling</a></li>
                         <li role="presentation"><a href="#">Sexual Health Care</a></li>
                     </ul>
-                </div> 
+                </div> -->
             </div>
 
         </div>
@@ -126,8 +121,8 @@
             <div class="col-md-12" style="padding:35px 0px;">
 
 
-                <form>
-               
+
+
 
                     <div class="form-group">
 					    {{ Form::label('brief_desc', 'Brief Description:', ['class' => 'control-label']) }}
@@ -137,15 +132,15 @@
 
 					<div class="form-group">
 					    {{ Form::label('full_desc', 'Other details:', ['class' => 'control-label']) }}
-					    {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }} 
+					    {{ Form::textarea('full_desc', null, ['class' => 'form-control']) }}
 					</div>
 
 
-                    
+
                     <div class="form-group">
                         {{ Form::submit('Book Appointment', ['class' => 'btn btn-primary']) }}
                     </div>
-                </form>
+
 
 
             </div>

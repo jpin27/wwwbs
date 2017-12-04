@@ -46,7 +46,7 @@ class AppointmentsController extends Controller
 
         // Dear Tayyab:
         // I'm just editing your query above to make it use Eloquent in Laravel.
-        // It's literally just the same, but it uses the User model instead of using 
+        // It's literally just the same, but it uses the User model instead of using
         // the Query Builder.
         //
         // Eloquent and Query Builder are two different ways on looking up the database.
@@ -56,11 +56,11 @@ class AppointmentsController extends Controller
         // My research took me to "pivot table Eloquent" and "join query eloquent"
         // to try and find a way to join the two tables in one query.
         //
-        // I'm sorry I'm drifting you away from your SQL comfort zone with this project. 
+        // I'm sorry I'm drifting you away from your SQL comfort zone with this project.
         $doctors = User::whereIn('id', [1,2,3,4,5,6,7,8,9,10,11,12])
                     ->get();
 
-        
+
         return view('appointments.create', compact('doctors'));
     }
 
@@ -73,19 +73,20 @@ class AppointmentsController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate input. 
+        // Validate input.
         // TODO: Tayyab, Hiba put a lot of regexes in his input validation.
         // This is where every validation is supposed to go.
 
         $this->validate($request, [
             'brief_desc' => 'required',
-            'full_desc' => 'required'
+            'full_desc' => 'required',
+            // 'id' => 'required'
         ]);
 
         // For debugging. dd() - "die and dump" - shows all the values that will be passed to the DB
         //dd($request->all());
         $input = $request->all();
-        
+
         // create() is a native Laravel Eloquent method. Basically, this line
         // stores the input to the database. See, no SQL!
         Appointment::create($input);
@@ -140,7 +141,8 @@ class AppointmentsController extends Controller
         // the store() method.
         $this->validate($request, [
             'brief_desc' => 'required',
-            'full_desc' => 'required'
+            'full_desc' => 'required',
+            // 'doctor_id' => 'required'
         ]);
 
         // Grab the input, then update the appointment

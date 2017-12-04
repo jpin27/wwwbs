@@ -36,7 +36,7 @@
 
 
 
-{{-- 
+{{--
 
 @foreach($appointments as $appointment)
     <h3>{{ $appointment->brief_desc }}</h3>
@@ -67,7 +67,7 @@
                 {{ Session::get('flash_message') }}
             </div>
         @endif
-        
+
     <div class="container">
 
 
@@ -76,12 +76,12 @@
 
 
         <h1>Appointment List</h1>
-        <p class="lead">Here's a list of all your appointments. 
+        <p class="lead">Here's a list of all your appointments.
             <a href="{{ route('appointments.create') }}">Book a new one?</a>
         </p>
         <hr>
 
-      
+
 
 
         <h2> My Bookings </h2><br>
@@ -138,8 +138,3 @@
 
 
 @endsection
-
-
-
-
-
