@@ -28,22 +28,7 @@ WWWBS uses the following technologies and open source projects to work properly:
 # Installation
 
 ### Development environment 
-WWWBS requires Laravel, Composer, and [npm] to run, as well as an AMP server: [Apache], MySQL, and PHP.
-
-Install [Composer](https://getcomposer.org/download/) (There's a Windows installer to make your life easier). `cd` into the directory where you `git clone`d the WWWBS repo, then install Laravel (we're making a global install just so it's more awesome):
-
-```bash
-$ composer global require "laravel/installer"
-```
-Verify that you have everything installed:
-
-```bash
-$ php -V
-$ composer --version
-$ laravel --version
-```
-
-You only have to do the steps above once, and you're all set to code!
+WWWBS requires [Composer] and [npm] to run, as well as an AMP server: [Apache], [MySQL], and [PHP]. [Laravel] is also required but it is already bundled with the Composer buildfile.
 
 ### During development 
 Compile the Vue.js and Laravel dependencies...
@@ -53,6 +38,21 @@ $ cd wwwbs
 $ npm install
 $ composer install
 ```
+
+Verify that you have everything installed.
+As of June 28, 2019, the current versions are the ones listed below:
+
+```bash
+$ php -v
+PHP 7.3.6 (cli) (built: May 29 2019 12:11:00) ( ZTS MSVC15 (Visual C++ 2017) x64 )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.6, Copyright (c) 1998-2018 Zend Technologies
+$ composer --version
+Composer version 1.8.6 2019-06-11 15:03:05
+$ php artisan --version
+Laravel Framework 5.5.22
+```
+
 Authenticate your session, then start the development server! Make sure you have the .env file in the `wwwbs` folder (for security, our .env file is not tracked by version control)
 
 ```bash
@@ -60,7 +60,7 @@ $ php artisan key:generate
 $ php artisan serve
 ```
 
-Keep the `php artisan serve` window open, and type http://127.0.0.1:8000 on your favourite browser (which is Chrome). Boom. Wacky.
+Keep the `php artisan serve` window open, and type http://127.0.0.1:8000 on your favourite browser. Boom. Wacky.
 
 ### Testing environment
 
