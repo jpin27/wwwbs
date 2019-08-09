@@ -12,6 +12,7 @@ before_script:
 #  - cp .env.travis .env
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
+  - php artisan key:generate
   - nvm install 7.7.1
   - npm install npm@latest -g
   - npm install -g jshint
