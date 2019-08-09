@@ -9,7 +9,7 @@ php:
 before_script:
   - composer self-update
   - composer install --no-interaction
-  - cp .env.travis .env
+#  - cp .env.travis .env
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
   - nvm install 7.7.1
