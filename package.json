@@ -15,7 +15,7 @@
         "font-awesome": "4.7.0",
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0",
-        "node-sass": "^4.12.0",
+        "node-sass": "^4.13.1",
         "popper.js": "^1.15.0",
         "scrollreveal": "^4.0.5",
         "scrollspy-js": "^0.1.3"
